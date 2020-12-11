@@ -4,7 +4,7 @@ const hbs  = require('hbs');
 const app  = express();
 const geoCode = require('./utils/geocode');
 const weatherInfo = require('./utils/weatherinfo');
-const port = 3000 ;
+const port = process.env.PORT || 3000 ;
 
 //console.log(path.join(__dirname,'..'));
 const pubDir = path.join(__dirname,'../public');
