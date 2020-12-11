@@ -10,7 +10,9 @@ const weatherInfo = (longitude, latitude, callback) => {
                   }else{
                         callback(undefined,{
                           temperature : response.body.current.temperature,
-                          feelslike : response.body.current.feelslike
+                          feelslike : response.body.current.feelslike,
+                          humidity : response.body.current.humidity,
+                          icon     : response.body.current.weather_icons[0],
                         });
                   }
        });

@@ -35,11 +35,11 @@ app.get('/weather',(req,res)=>{
            if(error)
               return res.send({error : 'Address not found'});
 
-            weatherInfo(longitude, latitude, (error, {temperature, feelslike})=>{
+            weatherInfo(longitude, latitude, (error, {temperature, feelslike, humidity, icon})=>{
                 if(error)
                   return res.send({error : 'weatherInfo error'});
 
-                  res.send({place, temperature, feelslike});
+                  res.send({place, temperature, feelslike, humidity, icon });
             });
     });
     
